@@ -47,13 +47,21 @@ I am seeking full-time opportunities in **RTL Design, Design Verification, and A
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
 </p>
 
-## Featured Project
+## Featured Projects
 
-### [ECG Arrhythmia Classification](https://github.com/Charan6556/ECG-Arrhythmia-Classification)
+### [RV32I Processor](https://github.com/Charan6556/RISCV-32I)
 
-Developed a 1D convolutional neural network for ECG arrhythmia classification. Applied SMOTE and focal loss to address class imbalance and created a PDF digitization pipeline for processing ECG data exported from a Samsung Galaxy Watch 8.
+A SystemVerilog implementation progressing from a single-cycle RV32I processor to a pipelined architecture with hazard handling, an AXI4-Lite master interface, and UVM verification.
 
-**Technologies:** Python, TensorFlow, signal processing, SMOTE, and 1D CNNs
+- **Current status:** Single-cycle processor complete; pipelining and hazards in progress
+- **Technologies:** SystemVerilog, RISC-V RV32I, UVM, AXI4-Lite
+
+### Packet Router Design and Verification
+
+A packet-router project focused on RTL design and reusable verification. The verification plan includes constrained-random packet generation, protocol-aware monitoring, functional coverage, and scoreboard-based checking.
+
+- **Current status:** In development; repository will be published after the implementation and results are organized
+- **Technologies:** SystemVerilog, UVM, SVA, functional coverage
 
 ## Current Focus
 
