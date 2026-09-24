@@ -1,3 +1,5 @@
+<p align="center">👨‍💻</p>
+
 <h1 align="center">Hi, I'm Charan Gundepinni</h1>
 
 <p align="center">
