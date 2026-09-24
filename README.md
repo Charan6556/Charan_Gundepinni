@@ -27,7 +27,6 @@
   <img src="https://img.shields.io/badge/UVM-1D4ED8?style=flat-square" alt="UVM"/>
   <img src="https://img.shields.io/badge/SVA-6D28D9?style=flat-square" alt="SystemVerilog Assertions"/>
   <img src="https://img.shields.io/badge/RISC--V-334155?style=flat-square" alt="RISC-V"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python"/>
 </p>
 
 ---
