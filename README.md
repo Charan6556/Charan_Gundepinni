@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man%20technologist/Default/3D/man_technologist_3d_default.png" width="128" height="128" alt="Developer coding on a laptop"/>
+  <img src="assets/hardware-debugger.png" width="320" alt="A chip mascot debugging digital waveforms with a magnifying glass"/>
 </p>
-<!-- Coding icon: Microsoft Fluent Emoji, MIT license: https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE -->
 
 <h1 align="center">Hi, I'm Charan Gundepinni</h1>
 
