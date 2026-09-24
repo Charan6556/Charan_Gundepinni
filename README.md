@@ -1,78 +1,144 @@
-<h1 align="center">Charan Gundepinni</h1>
+<h1 align="center">Hi, I'm Charan Gundepinni</h1>
 
 <p align="center">
-  <strong>Digital Design & Verification Engineer</strong><br/>
-  RTL Design · Functional Verification · ASIC/FPGA Front-End
+  <strong>RTL Design &amp; Design Verification · Graduate Teaching Assistant</strong><br/>
+  SystemVerilog · UVM · Digital Systems · Processor Architecture
 </p>
 
 <p align="center">
-  M.S. in Electrical Engineering, Colorado State University · Graduating December 2026
+  M.S. Electrical Engineering · Colorado State University · Expected December 2026<br/>
+  Seeking full-time RTL, verification, and ASIC front-end roles after graduation
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/charan-gundepinni"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <img src="https://komarev.com/ghpvc/?username=Charan6556&style=for-the-badge&color=blue" alt="Profile views"/>
+  <a href="https://www.linkedin.com/in/charan-gundepinni">LinkedIn</a> ·
+  <a href="https://github.com/Charan6556?tab=repositories">All Projects</a> ·
+  <a href="#technical-skills">Technical Skills</a> ·
+  <a href="#teaching-experience">Teaching Experience</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/SystemVerilog-155E75?style=flat-square" alt="SystemVerilog"/>
+  <img src="https://img.shields.io/badge/UVM-1D4ED8?style=flat-square" alt="UVM"/>
+  <img src="https://img.shields.io/badge/SVA-6D28D9?style=flat-square" alt="SystemVerilog Assertions"/>
+  <img src="https://img.shields.io/badge/RISC--V-334155?style=flat-square" alt="RISC-V"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python"/>
 </p>
 
 ---
 
 ## About Me
 
-I am an electrical engineering graduate student focused on RTL design, functional verification, and ASIC/FPGA development. My interests include reusable UVM environments, assertion-based verification, coverage closure, digital system design, and processor architecture.
+I'm an electrical engineering graduate student focused on **digital hardware design and functional verification**. I build RTL and SystemVerilog/UVM testbenches, develop independent reference models, and use assertions, functional coverage, and simulation evidence to check design behavior.
 
-I am seeking full-time opportunities in **RTL Design, Design Verification, and ASIC Front-End Engineering** following my graduation in December 2026.
+My projects span packet routing, APB peripherals, synchronous FIFOs, and processor design. As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
 
 ## Technical Skills
 
-- **HDL & HVL:** Verilog, VHDL, SystemVerilog, SystemVerilog Assertions (SVA), Universal Verification Methodology (UVM)
-- **Verification:** Constrained-random verification, coverage-driven verification, assertion-based verification, functional and code coverage, and testbench development
-- **Protocols:** AXI4, PCIe, AHB, APB, UART, and SPI
-- **EDA Tools:** Synopsys VCS, Design Compiler, SpyGlass, Verdi, ModelSim, QuestaSim, Cadence Xcelium, Cadence Virtuoso, Intel Quartus Prime, and AMD Vivado
-- **Programming:** C, C++, Python, and Perl
-- **ASIC & FPGA:** RTL design, ASIC/FPGA design flows, static timing analysis, lint, DFT, and processor architecture
-- **FPGA Platforms:** Intel/Altera Cyclone V and AMD Kintex-7
-- **Development Environment:** Linux, Git, and Make
+| Area | Skills demonstrated in my projects and teaching |
+| --- | --- |
+| **RTL & digital design** | Verilog, SystemVerilog, combinational and sequential logic, Mealy/Moore state machines, parameterized FIFOs, register interfaces, packet routing, processor design |
+| **UVM testbench development** | Transactions, sequences, sequencers, drivers, monitors, agents, environments, virtual sequencers, analysis ports, virtual interfaces, configuration |
+| **Functional verification** | Directed and constrained-random stimulus, independent scoreboards, reference models, readback checks, boundary testing, error injection, checker validation |
+| **Assertions & coverage** | SystemVerilog Assertions, bound FIFO/FSM properties, APB protocol checks, coverpoints, cross coverage |
+| **Simulation, lint & synthesis** | Cadence Xcelium, Synopsys VCS, waveform analysis, Verilator RTL lint, Yosys synthesis, SKY130 standard-cell mapping |
+| **FPGA implementation & debug** | Intel Quartus, DE10-Lite, simulation-to-hardware debugging, latch identification, state-transition analysis, nanoprocessor implementation |
+| **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing, class-imbalance handling, classification evaluation, ECG trace extraction |
 
-## Core Technologies
+<details>
+<summary><strong>Additional technical background & tools</strong></summary>
 
-<p>
-  <img src="https://img.shields.io/badge/SystemVerilog-EF3B2D?style=for-the-badge&logoColor=white" alt="SystemVerilog"/>
-  <img src="https://img.shields.io/badge/Verilog-C40E0E?style=for-the-badge&logoColor=white" alt="Verilog"/>
-  <img src="https://img.shields.io/badge/VHDL-543978?style=for-the-badge&logoColor=white" alt="VHDL"/>
-  <img src="https://img.shields.io/badge/UVM-6E4C13?style=for-the-badge&logoColor=white" alt="UVM"/>
-  <img src="https://img.shields.io/badge/SVA-4B32C3?style=for-the-badge&logoColor=white" alt="SVA"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/C%2FC%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C/C++"/>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-</p>
+<br/>
 
-## Featured Projects
+| Area | Background |
+| --- | --- |
+| **Languages** | VHDL, C, C++, Perl |
+| **Interfaces & protocols** | AXI4 / AXI4-Lite, AHB, PCIe, UART, SPI |
+| **EDA tools** | Design Compiler, SpyGlass, Verdi, ModelSim, QuestaSim, Cadence Virtuoso, AMD Vivado |
+| **ASIC & FPGA concepts** | ASIC/FPGA design flows, static timing analysis, lint, design for test, processor architecture |
+| **Additional FPGA platforms** | Intel/Altera Cyclone V, AMD Kintex-7 |
+| **Development environment** | Linux, Git, Make |
 
-### [RV32I Processor](https://github.com/Charan6556/RISCV-32I)
+</details>
 
-A SystemVerilog implementation progressing from a single-cycle RV32I processor to a pipelined architecture with hazard handling, an AXI4-Lite master interface, and UVM verification.
+## Teaching Experience
 
-- **Current status:** Single-cycle processor complete; pipelining and hazards in progress
-- **Technologies:** SystemVerilog, RISC-V RV32I, UVM, AXI4-Lite
+### Graduate Teaching Assistant · Colorado State University
 
-### Packet Router Design and Verification
+**ECE 252 — Introduction to Digital Circuits · Fall 2026**  
+Working with **Prof. Anura Jayasumana**
 
-A packet-router project focused on RTL design and reusable verification. The verification plan includes constrained-random packet generation, protocol-aware monitoring, functional coverage, and scoreboard-based checking.
+- Lead **three laboratory sessions each week**, guiding students from truth tables and Karnaugh maps through Quartus, RTL design, simulation, and FPGA implementation on the **DE10-Lite**.
+- Hold office hours on Boolean algebra, flip-flops, and Mealy and Moore finite-state machines.
+- Help students identify unintended latches, trace incorrect state transitions, and debug differences between simulation and FPGA behavior.
+- Evaluate lab reports and help students explain how logic, timing, and state transitions affect their results.
 
-- **Current status:** In development; repository will be published after the implementation and results are organized
-- **Technologies:** SystemVerilog, UVM, SVA, functional coverage
+#### Hardware Build: 8-Bit Nanoprocessor
 
-## Current Focus
+For the lab interview, I designed an **8-bit nanoprocessor from scratch in Quartus** and demonstrated it on the **DE10-Lite FPGA platform**. The design included a gate-level adder/subtractor, a **4×4 array multiplier**, a control ROM, and a register bank.
 
-- Building modular, synthesizable RTL in Verilog and SystemVerilog
-- Developing reusable UVM verification environments
-- Applying SVA, constrained-random stimulus, and coverage-driven verification
-- Strengthening ASIC front-end, FPGA, and processor-architecture expertise
+Teaching these fundamentals strengthens how I reason about RTL, debug hardware, and explain design decisions.
 
-## GitHub Activity
+## Selected Projects
+
+### [1×3 Packet Router — RTL & UVM Verification](https://github.com/Charan6556/router-1x3-uvm)
+
+An 8-bit packet router with one input and three output FIFOs, verified with coordinated UVM agents, packet scoreboarding, directed boundary cases, constrained-random traffic, parity-error injection, and bound FIFO/FSM assertions.
+
+- **Recorded Xcelium regression:** 5,024 matched packets, zero mismatches, and **100% of the defined functional coverage model**.
+- **Checker validation:** a separate recorded mutation test detected 74 mismatched packets after intentional output corruption.
+- **Design flow:** Verilator lint, Yosys synthesis, and SKY130 technology mapping.
+
+[Regression evidence](https://github.com/Charan6556/router-1x3-uvm/blob/main/reports/xcelium_sva_regression.txt) · [Mutation-test evidence](https://github.com/Charan6556/router-1x3-uvm/blob/main/reports/mutation_test.txt) · [Architecture & testbench guide](https://github.com/Charan6556/router-1x3-uvm/blob/main/docs/testbench_guide.md)
+
+### [APB Multi-Slave — Protocol & UVM Verification](https://github.com/Charan6556/APB-Multi-Slave-UVM-Verification)
+
+An APB subsystem with two memory-mapped slaves, including zero-wait and two-wait-state responses.
+
+- Built requester-side stimulus, a completed-transfer monitor, per-slave reference memories, and readback checking.
+- Added assertions for protocol sequencing, slave selection, and signal stability during wait states.
+- **Recorded run:** 20 monitored transfers, **100% of the defined functional coverage model**, and zero UVM warnings, errors, or fatals.
+
+### [Synchronous FIFO — RTL & UVM Verification](https://github.com/Charan6556/Synchronous-FIFO-UVM-Verification)
+
+A parameterized FIFO with an independent queue-based scoreboard and assertions for reset, occupancy, and pointer behavior.
+
+- Checked full/empty boundaries, data ordering, and blocked overflow/underflow attempts with directed fill-and-drain sequences.
+- **Recorded run:** 16 accepted writes, 16 accepted reads, no remaining reference entries, and zero UVM warnings, errors, or fatals.
+
+### [RV32I Processor — Ongoing Development](https://github.com/Charan6556/RISCV-32I)
+
+A SystemVerilog processor project progressing from a single-cycle implementation toward a pipelined architecture.
+
+- **Completed milestone:** single-cycle processor.
+- **In progress:** pipelining and hazard handling.
+- **Roadmap:** AXI4-Lite integration and UVM verification.
+
+<details>
+<summary><strong>More projects: SystemVerilog foundations & machine learning</strong></summary>
+
+<br/>
+
+- **[SystemVerilog Class-Based Verification](https://github.com/Charan6556/SystemVerilog-Class_Based_Verification):** Modular environments for a mux, full adder, and synchronous counter using transactions, mailboxes, virtual interfaces, and self-checking scoreboards.
+- **[ECG Arrhythmia Classification](https://github.com/Charan6556/ECG-Arrhythmia-Classification):** An educational five-class heartbeat classifier using Python, TensorFlow, a 1D CNN, signal preprocessing, and an experimental ECG trace-extraction pipeline. The repository documents recorded results and evaluation limitations.
+
+</details>
+
+## How I Approach Verification
+
+- **Model expected behavior independently** so DUT status signals cannot hide their own bugs.
+- **Start with boundaries and corner cases:** reset, full/empty transitions, protocol wait states, and malformed traffic.
+- **Check the checker** by confirming that intentional corruption produces failures.
+- **Connect claims to evidence:** retain scoreboards, coverage summaries, waveforms, and the scope of each recorded run.
+
+## Education
+
+**Colorado State University**  
+M.S. in Electrical Engineering · Expected December 2026
+
+---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Charan6556&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Charan6556&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165"/>
+  Interested in RTL design, design verification, and ASIC front-end opportunities.<br/>
+  <a href="https://www.linkedin.com/in/charan-gundepinni"><strong>Let's connect on LinkedIn</strong></a>
 </p>
