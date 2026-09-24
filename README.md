@@ -14,6 +14,7 @@
   <a href="https://www.linkedin.com/in/charan-gundepinni">LinkedIn</a> ·
   <a href="https://github.com/Charan6556?tab=repositories">All Projects</a> ·
   <a href="#technical-skills">Technical Skills</a> ·
+  <a href="#professional-experience">Professional Experience</a> ·
   <a href="#teaching-experience">Teaching Experience</a>
 </p>
 
@@ -30,6 +31,8 @@
 ## About Me
 
 I'm an electrical engineering graduate student focused on **digital hardware design and functional verification**. I build RTL and SystemVerilog/UVM testbenches, develop independent reference models, and use assertions, functional coverage, and simulation evidence to check design behavior.
+
+Alongside my graduate studies, I am an **ASIC Design Verification Trainee at Maven Silicon**.
 
 My projects span packet routing, APB peripherals, synchronous FIFOs, and processor design. As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
 
@@ -60,6 +63,12 @@ My projects span packet routing, APB peripherals, synchronous FIFOs, and process
 | **Development environment** | Linux, Git, Make |
 
 </details>
+
+## Professional Experience
+
+### ASIC Design Verification Trainee · Maven Silicon
+
+**January 2026 – Present**
 
 ## Teaching Experience
 
