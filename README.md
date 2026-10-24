@@ -37,38 +37,43 @@
 
 ## [About Me](#about-me)
 
-I'm an electrical engineering graduate student focused on **SoC and ASIC front-end design and verification**. I develop **Verilog/SystemVerilog RTL** and **UVM testbenches**, using independent reference models, **SystemVerilog Assertions (SVA)**, functional coverage, and simulation evidence to check design behavior.
+I'm an electrical engineering graduate student focused on **SoC and ASIC front-end design and verification**. I write **Verilog/SystemVerilog RTL** and then verify it myself with **UVM testbenches**, using reference models, **SystemVerilog Assertions (SVA)**, and functional coverage to check that the design does what it should.
 
-Alongside my graduate studies, I am an **ASIC Design Verification Trainee at Maven Silicon**.
+Alongside my studies, I'm an **ASIC Design Verification Trainee at Maven Silicon**.
 
-My projects focus on **SoC building blocks**: AXI4 memory-mapped slaves, APB peripherals, synchronous FIFOs, packet-routing logic, and a five-stage pipelined RV32I processor. My RV32I, AXI4, and packet-router projects also demonstrate an **ASIC front-end flow: RTL → logic synthesis (Yosys, Cadence Genus) → SKY130 standard-cell mapping**.
+My projects are **SoC building blocks**: an AXI4 memory slave, APB peripherals, a synchronous FIFO, a packet router, and a **five-stage pipelined RV32I processor**. I take my RV32I, AXI4, and router designs through **logic synthesis (Yosys, Cadence Genus) on SKY130** to check timing and area. I also run **C programs on my own RV32I core**: a self-playing Snake game compiled with clang runs **56.9M instructions at 1.216 CPI** in Verilator.
 
-As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also work with Python and TensorFlow on signal-processing and machine-learning projects.
+Right now I'm building a **small RISC-V SoC** from my own blocks and adding **low-power features (UPF power gating, clock gating)** to my INT8 systolic array accelerator.
+
+As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also use Python, PyTorch, and TensorFlow for signal-processing and machine-learning projects.
 
 ## [Technical Skills](#technical-skills)
 
 | Area | Skills demonstrated in my projects and teaching |
 | --- | --- |
-| **ASIC RTL & digital design** | Verilog, SystemVerilog, combinational and sequential logic, Mealy/Moore state machines, parameterized FIFOs, register interfaces, packet routing, processor design |
-| **SoC interfaces & AMBA protocols** | AXI4 memory-mapped slaves, five-channel handshakes, INCR bursts, byte strobes, narrow and unaligned accesses; APB multi-slave peripherals, transfers, and wait states |
+| **ASIC RTL & digital design** | Verilog, SystemVerilog, combinational and sequential logic, Mealy/Moore state machines, parameterized FIFOs, register interfaces, packet routing, processor design, systolic arrays |
+| **SoC interfaces & AMBA protocols** | AXI4 memory-mapped slaves, five-channel handshakes, INCR bursts, byte strobes, narrow and unaligned accesses; AXI4-Lite control registers; APB multi-slave peripherals, transfers, and wait states |
 | **UVM & IP verification** | Transactions, sequences, sequencers, drivers, monitors, agents, environments, virtual sequencers, analysis ports, virtual interfaces, configuration |
-| **Functional verification** | Directed and constrained-random stimulus, independent scoreboards, reference models, readback checks, boundary testing, error injection, checker validation |
+| **Functional verification** | Verification plans, directed and constrained-random stimulus, independent scoreboards, reference models, readback checks, boundary testing, error injection, mutation testing |
 | **Assertions & coverage** | SystemVerilog Assertions, bound FIFO/FSM properties, APB protocol checks, coverpoints, cross coverage |
 | **ASIC lint & synthesis** | Verilator RTL lint, Yosys and Cadence Genus logic synthesis, SKY130 standard-cell mapping, timing/QoR reports, synthesis netlists and cell-area reports |
-| **Simulation & waveform debug** | Cadence Xcelium, SimVision, Synopsys VCS, waveform analysis, Perl multi-seed regression scripts |
-| **Processor architecture** | RV32I five-stage pipeline: forwarding, load-use stalls, branch/jump flush; instruction formats and immediate decoding; 8-bit nanoprocessor design |
+| **Low-power design** | Clock gating, power gating, multi-VT, DVFS, UPF power-aware simulation (Xcelium), static and dynamic power analysis |
+| **Simulation & waveform debug** | Cadence Xcelium, SimVision, Synopsys VCS, Verilator, waveform analysis, Perl multi-seed regression scripts |
+| **Processor architecture** | RV32I five-stage pipeline: forwarding, load-use stalls, branch/jump flush; instruction formats and immediate decoding; bare-metal C on the core with performance counters; 8-bit nanoprocessor design |
+| **Performance analysis** | CPI/IPC analysis, caches, branch prediction, multicore scaling, Sniper simulator, OpenMP |
+| **Custom VLSI** | Transistor sizing, CMOS layout in Cadence Virtuoso (180 nm), DRC and LVS |
 | **FPGA implementation & debug** | Intel Quartus, DE10-Lite, simulation-to-hardware debugging, latch identification, state-transition analysis, nanoprocessor implementation |
-| **Programming & ML** | Python, TensorFlow, 1D CNNs, signal preprocessing |
+| **Programming & ML** | Python, PyTorch, TensorFlow, Pandas, NumPy, 1D CNNs, signal preprocessing |
 
 ### Additional technical background & tools
 
 | Area | Background |
 | --- | --- |
-| **Languages** | C, Perl |
-| **Interfaces & protocols** | UART, SPI |
-| **EDA tools** | Synopsys Verdi, ModelSim, QuestaSim |
-| **ASIC & FPGA concepts** | ASIC/FPGA design flows, static timing analysis (STA) basics, RTL lint |
-| **Development environment** | Linux, Git, Make |
+| **Languages** | C, C++, Perl, Tcl |
+| **Interfaces & protocols** | UART, SPI, PCIe fundamentals |
+| **EDA tools** | Synopsys Verdi, Design Compiler, SpyGlass, ModelSim, QuestaSim |
+| **ASIC & FPGA concepts** | ASIC/FPGA design flows, static timing analysis (STA) basics, RTL lint, CDC/RDC and DFT fundamentals |
+| **Development environment** | Linux, Git, Make, clang/LLVM |
 
 ## [Selected Projects](#selected-projects)
 
@@ -78,10 +83,11 @@ An in-order, five-stage pipeline implementing the 37 RV32I base integer instruct
 
 - **UVM verification:** commit-based reference scoreboard, 10 bound SVA properties, and functional coverage: **100% of the 37 instruction bins** and 98.41% pipeline coverage (seed 25: 682 commits, 0 scoreboard errors).
 - **Regression:** **1,000 seeds passed, 0 failures**, each running 80 directed + 60 random instructions (**60,000 random instructions** in total). Traced 12 earlier failing seeds to a signed-shift bug in the scoreboard's reference model.
+- **C program on the core:** a self-playing Snake game compiled with clang runs on the RTL in Verilator: **56,912,196 instructions at 1.216 CPI**. The performance counters account for every cycle: load-use stalls, 2 cycles per taken branch, and 4 cycles of pipeline fill.
 - **Program run:** Bubble Sort sorted correctly in 169 cycles for 121 retired instructions (CPI 1.40).
 - **ASIC front-end flow:** Cadence Genus synthesis on SKY130 HD met a **4 ns (250 MHz)** pre-layout target at the typical corner, 71,967 µm² cell area.
 
-[Coverage evidence](https://github.com/Charan6556/RISCV-32I/blob/main/docs/images/coverage-seed25.png) · [Regression evidence](https://github.com/Charan6556/RISCV-32I/blob/main/docs/images/regression-1000-pass.png) · [Synthesis report](https://github.com/Charan6556/RISCV-32I/blob/main/synth/reports/4ns/qor.rpt) · [Debugging notes](https://github.com/Charan6556/RISCV-32I/blob/main/docs/debugging.md)
+[Coverage evidence](https://github.com/Charan6556/RISCV-32I/blob/main/docs/images/coverage-seed25.png) · [Regression evidence](https://github.com/Charan6556/RISCV-32I/blob/main/docs/images/regression-1000-pass.png) · [Synthesis report](https://github.com/Charan6556/RISCV-32I/blob/main/synth/reports/4ns/qor.rpt) · [Debugging notes](https://github.com/Charan6556/RISCV-32I/blob/main/docs/debugging.md) · [Snake demo](https://github.com/Charan6556/RISCV-32I/tree/main/riscv_snake_demo)
 
 ### [AXI4 Memory Slave — RTL & UVM Verification](https://github.com/Charan6556/axi4-memory-slave-uvm)
 
@@ -120,6 +126,16 @@ A parameterized FIFO with an independent queue-based scoreboard and assertions f
 - Checked full/empty boundaries, data ordering, and blocked overflow/underflow attempts with directed fill-and-drain sequences.
 - **Recorded run:** 16 accepted writes, 16 accepted reads, no remaining reference entries, and zero UVM warnings, errors, or fatals.
 
+### In Progress
+
+- **INT8 Systolic Array Accelerator:** 4×4 output-stationary array (16 INT8 MACs) with an AXI4-Lite control slave, 117 self-checking tests, and 250 MHz on SKY130 (94,283 µm²). Adding UPF power gating and clock gating now. Repo coming soon.
+- **RISC-V SoC:** integrating my RV32I core, on-chip SRAM, and the AXI4 memory slave with APB peripherals, plus branch prediction and an L1 cache. Target is Tiny Tapeout.
+
+### Coursework Projects
+
+- **Computer Architecture (ECE 452):** compared in-order and out-of-order cores in Sniper (3.7× IPC for 1.7× power), swept cache sizes, branch predictors, and core counts (4–64), and measured OpenMP scaling on an 8-core Apple M3 (4.7× speedup).
+- **VLSI Design (ECE 571):** sized NAND2 gates for 100–500 fF loads in Cadence Virtuoso (180 nm), drew the layouts with fingering, and passed DRC and LVS.
+
 <details>
 <summary><strong>More projects: SystemVerilog foundations & machine learning</strong></summary>
 
@@ -150,16 +166,14 @@ A parameterized FIFO with an independent queue-based scoreboard and assertions f
 **ECE 252 — Introduction to Digital Circuits · Fall 2026**  
 Working with **Prof. Anura Jayasumana**
 
-- Lead **three laboratory sessions each week**, guiding students from truth tables and Karnaugh maps through Quartus, RTL design, simulation, and FPGA implementation on the **DE10-Lite**.
-- Hold office hours on Boolean algebra, flip-flops, and Mealy and Moore finite-state machines.
-- Help students identify unintended latches, trace incorrect state transitions, and debug differences between simulation and FPGA behavior.
-- Evaluate lab reports and help students explain how logic, timing, and state transitions affect their results.
+- Lead **three lab sessions each week**, taking students from truth tables and Karnaugh maps through schematic capture and Verilog in Quartus to FPGA implementation on the **DE10-Lite**.
+- Hold office hours on Boolean algebra, flip-flops, and Mealy and Moore state machines.
+- Help students find unintended latches, trace wrong state transitions, and debug differences between simulation and the FPGA.
+- Grade lab reports and help students explain how logic, timing, and state transitions affect their results.
 
 #### Hardware Build: 8-Bit Nanoprocessor
 
-For the lab interview, I designed an **8-bit nanoprocessor from scratch in Quartus** and demonstrated it on the **DE10-Lite FPGA platform**. The design included a gate-level adder/subtractor, a **4×4 array multiplier**, a control ROM, and a register bank.
-
-Teaching these fundamentals strengthens how I reason about RTL, debug hardware, and explain design decisions.
+For the lab interview, I designed an **8-bit nanoprocessor from scratch in Quartus** and demonstrated it on the **DE10-Lite FPGA**. It had a gate-level adder/subtractor, a **4×4 array multiplier**, a control ROM, and a register bank.
 
 <p align="center">
   <img src="assets/design-approach.svg" width="150" alt="A chip on a blueprint with a pencil"/>
@@ -167,22 +181,26 @@ Teaching these fundamentals strengthens how I reason about RTL, debug hardware, 
 
 ## [How I Approach Design](#how-i-approach-design)
 
-- **Start from the spec, not the code:** write down the features and edge cases first, then build block by block (AXI4 slave rebuilt from a written spec: bursts, WSTRB, unaligned starts, SLVERR).
-- **Safe defaults, no latches:** every combinational block assigns a default first, then overrides per case, so unknown inputs do nothing (RV32I decoder starts from a NOP control word).
-- **Split the design into small jobs:** separate read and write controllers, one module per datapath step, so each piece can be tested and explained on its own.
-- **Check results after every tool step:** lint before simulation (router: zero Verilator warnings), and question synthesis numbers (caught an address-range mismatch in the scaled AXI variant before the final Genus run).
+- **Start from the spec, not the code:** write down the features and edge cases first, then build block by block (my AXI4 slave was built from a written spec: bursts, WSTRB, unaligned starts, SLVERR).
+- **Safe defaults, no latches:** every combinational block assigns a default first, then overrides per case (my RV32I decoder starts from a NOP control word).
+- **Small blocks:** separate read and write controllers, one module per datapath step, so each piece can be tested and explained on its own.
+- **Measure, don't guess:** lint before simulation (router: zero Verilator warnings), check synthesis numbers, and use performance counters to explain where every cycle goes (RV32I: CPI 1.216 broken down into stalls and branch flushes).
 
 ## [How I Approach Verification](#how-i-approach-verification)
 
-- **Model expected behavior independently** so DUT status signals cannot hide their own bugs.
-- **Start with boundaries and corner cases:** reset, full/empty transitions, protocol wait states, and malformed traffic.
-- **Check the checker** by confirming that intentional corruption produces failures.
-- **Connect claims to evidence:** retain scoreboards, coverage summaries, waveforms, and the scope of each recorded run.
+- **Build the expected result separately** with a reference model, so the design can't hide its own bugs.
+- **Start with the edge cases:** reset, full/empty, protocol wait states, and bad traffic.
+- **Test the checker:** inject a bug on purpose and make sure the test fails (router mutation test: 74 bad packets caught).
+- **Keep the proof:** save scoreboard results, coverage reports, and waveforms for every result I report.
 
 ## [Education](#education)
 
 **Colorado State University**  
-M.S. in Electrical Engineering · GPA: 3.611 · Expected December 2026
+M.S. in Electrical Engineering · GPA: 3.611 · Expected December 2026  
+Coursework: Computer Architecture, VLSI Design, Semiconductor Memory, Digital Design, Machine Learning
+
+**VNR Vignana Jyothi Institute of Engineering and Technology**, Hyderabad, India  
+B.Tech in Electronics and Communication Engineering · 2020 – 2024
 
 ---
 
