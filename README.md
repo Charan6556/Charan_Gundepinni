@@ -43,7 +43,7 @@ Alongside my studies, I'm an **ASIC Design Verification Trainee at Maven Silicon
 
 My projects are **SoC building blocks**: an AXI4 memory slave, APB peripherals, a synchronous FIFO, a packet router, and a **five-stage pipelined RV32I processor**. I take my RV32I, AXI4, and router designs through **logic synthesis (Yosys, Cadence Genus) on SKY130** to check timing and area. I also run **C programs on my own RV32I core**: a self-playing Snake game compiled with clang runs **56.9M instructions at 1.216 CPI** in Verilator.
 
-Right now I'm building a **small RISC-V SoC** from my own blocks and adding **low-power features (UPF power gating, clock gating)** to my INT8 systolic array accelerator.
+I built a **power-gated 4×4 INT8 systolic array accelerator** and verified its power sequencing in Cadence Xcelium. I’m also building a **small RISC-V SoC** from my own blocks.
 
 As a **Graduate Teaching Assistant for ECE 252 at Colorado State University**, I lead three labs each week and help students take digital circuits from Boolean logic to FPGA implementation. I also use Python, PyTorch, and TensorFlow for signal-processing and machine-learning projects.
 
@@ -126,9 +126,16 @@ A parameterized FIFO with an independent queue-based scoreboard and assertions f
 - Checked full/empty boundaries, data ordering, and blocked overflow/underflow attempts with directed fill-and-drain sequences.
 - **Recorded run:** 16 accepted writes, 16 accepted reads, no remaining reference entries, and zero UVM warnings, errors, or fatals.
 
-### In Progress
+### [Power-Gated 4×4 INT8 Systolic Array Accelerator](https://github.com/Charan6556/systolic-array-lowpower)
 
-- **INT8 Systolic Array Accelerator:** 4×4 output-stationary array (16 INT8 MACs) with an AXI4-Lite control slave, 117 self-checking tests, and 250 MHz on SKY130 (94,283 µm²). Adding UPF power gating and clock gating now. Repo coming soon.
+- Designed an output-stationary array with 16 INT8 MACs, INT32 accumulators, and an AXI4-Lite register interface.
+- Verified UPF power gating, isolation, and retention in Cadence Xcelium using UVM, SystemVerilog assertions, and injected power-sequencing faults.
+- Ran an INT8 MNIST CNN in RTL simulation. Results matched the Python reference bit-for-bit on **100 of 100 test images**.
+- Met a **4 ns clock constraint (250 MHz)** in Cadence Genus synthesis of the core on SKY130 HD. The UPF checks ran separately in power-aware simulation.
+
+[Interactive pipeline](https://charan6556.github.io/systolic-array-lowpower/pipeline.html) · [MNIST demo](https://charan6556.github.io/systolic-array-lowpower/media/mnist_live_demo.mp4) · [Model and training notebook](https://github.com/Charan6556/systolic-array-lowpower#model-and-quantization)
+
+### In Progress
 - **RISC-V SoC:** integrating my RV32I core, on-chip SRAM, and the AXI4 memory slave with APB peripherals, plus branch prediction and an L1 cache. Target is Tiny Tapeout.
 
 ### Coursework Projects
